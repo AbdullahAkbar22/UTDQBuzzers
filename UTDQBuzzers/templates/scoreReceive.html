@@ -1,0 +1,162 @@
+<html>
+<head>
+<script src="js/jquery.js"></script>
+<!--<meta name="viewport" content="width=device-width">-->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/scoreReceive.css">
+<title>Receiving Score</title>
+</head>
+
+<body>
+<img id="logo" src="teamLogo.png"></img>
+<div id="whoBuzzed">
+<span id="buzzerName"></span> buzzed in!</div>
+
+
+<div id="correct" class="ctrlbtns" onclick="correct(15)">15</div>
+<div id="correctSecond" class="ctrlbtns" onclick="correct(10)">10</div>
+ <div id="incorrect" class="ctrlbtns" onclick="incorrect(-5)">-5</div>
+ <div id="showScoreboard" class="ctrlbtns" onclick="showScoreboard()">Show Scoreboard</div>
+ <div id="resetScoreboard" class="ctrlbtns" onclick="resetScoreboard()">Reset Scoreboard</div>
+ <div id="reset" class="ctrlbtns" onclick="reset()">Reset Buzzer</div>
+<audio src="bellRing.mp3" id="bellRing"></audio>
+
+
+
+
+<div id="scoreBoard">
+	<div id="xButton" onclick="hideScoreboard()">X</div>
+	<h1>Room Scoreboard</h1>
+	<div class="row scorerow rowhead">
+		<div class="col-2">#</div>
+		<div class="col">Player</div>
+		<div class="col-3">Score</div>
+		<div class="col-1"></div>
+	</div>
+	<div id="scorerows">
+	
+	</div>
+
+</div>
+
+
+<script>
+enterusernameline;
+enteripaddress;
+</script>
+
+<script>
+
+
+var serverSocket = new WebSocket(ip, 'echo-protocol');
+
+serverSocket.onopen = function (event) {
+  serverSocket.send("authAdmin:1821839091231:"+adminName); 
+};
+serverSocket.onmessage = function (event) {
+  sockmessage = event.data;
+  if(sockmessage.indexOf("buzzedIn") > -1 && !lockedout){
+  
+	buzzedIn(sockmessage.split("buzzedIn:")[1]);
+  }
+   else if(sockmessage.indexOf("addUserScore:") > -1){
+	sockarray = sockmessage.split("addUserScore:")[1].split(":");
+	whoToAdd = sockarray[1];
+	whatToAdd = sockarray[2];
+	
+  }
+  
+  else if(sockmessage.indexOf("clearScoreboard:9012983123") > -1){
+	$("#scorerows").html("");
+  }
+  else if(sockmessage.indexOf("updateScore:091239231:") > -1){
+	userScoreDataArray = sockmessage.split("updateScore:091239231:")[1].split(":");
+	playerRank = userScoreDataArray[0];
+	thePlayerName = userScoreDataArray[1];
+	playerScore = userScoreDataArray[2];
+	playerrowcode = '<div class="row scorerow" player="'+thePlayerName+'"><div class="col-2">'+playerRank+'.</div><div class="col">'+thePlayerName+'</div><div class="col-3">'+playerScore+'</div><div class="col-1"><img src="trashcan.png" class="trashIcon" onclick="deletePlayer(\''+thePlayerName+'\')"></img></div></div>';
+	$("#scorerows").append(playerrowcode);
+  }
+  
+  
+};
+
+</script>
+
+<script>
+lockedout = false;
+function blinkBuzz(indexOn){
+	if(indexOn != 4){
+		newNumb = 500 - (50 * indexOn);
+		$("#whoBuzzed").fadeIn(300,function(){$("#whoBuzzed").fadeOut(300, function(){blinkBuzz(indexOn + 1);});});
+		
+	}
+	else{
+		$("#whoBuzzed").fadeIn(600);
+		$(".ctrlbtns").css("display","block");
+		//setTimeout(function(){endIntro();},5200);
+	}
+	
+}
+	
+function buzzedIn(buzzerName){
+	lockedout = true;
+	document.getElementById("bellRing").play();
+	$("#buzzerName").text(buzzerName);
+	
+	blinkBuzz(0);
+	
+
+}
+function resetScorer(){
+	$("#whoBuzzed").css("display","none");
+	$(".ctrlbtns").css("display","none");
+	serverSocket.send("reset:79274239:"+adminName);
+	lockedout = false;
+}
+
+function correct(scoreChange){
+	correctBuzzer = $("#buzzerName").text();
+	if(correctBuzzer.length > 0){
+		serverSocket.send("addScore:231308123:"+correctBuzzer+":"+scoreChange);
+	}
+	resetScorer();
+}
+function incorrect(scoreChange){
+	incorrectBuzzer = $("#buzzerName").text();
+	if(incorrectBuzzer.length > 0){
+		serverSocket.send("addScore:231308123:"+incorrectBuzzer+":"+scoreChange);
+	}
+	resetScorer();
+}
+
+function resetScoreboard(){
+	if(confirm("Do you really want to reset the scoreboard?")){
+	serverSocket.send("resetScoreboard:4203491023:"+adminName);
+	}
+	//resetScorer();
+}
+
+function reset(){
+	resetScorer();
+}
+
+function showScoreboard(){
+	$("#scoreBoard").css("display","block");
+}
+function hideScoreboard(){
+	$("#scoreBoard").css("display","none");
+}
+
+function deletePlayer(playerName){
+	if(confirm("Do you want to delete player "+playerName+"?")){
+		serverSocket.send("deletePlayer:82317012406123:"+playerName);
+	}
+}
+	
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,146 @@
+<html>
+<head>
+<script src="js/jquery.js"></script>
+<!--<meta name="viewport" content="width=device-width">-->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/buzzer.css">
+<title>Buzzer</title>
+<!--<script src="js/buzzer.js"></script>-->
+
+</head>
+<body>
+
+<button id="buzzer" >Buzz!</button>
+<script>
+$('#buzzer').on('click touchstart', function() { buzz(); });
+</script>
+<div id="bodyDiv">
+	<div class="smallDiv" number="1">
+		
+		<img src="teamlogo.png" id="logo"></img>
+	
+	</div>
+	
+	<div class="smallDiv" number="2" class="" id="scoreBoard">
+		<h1>Room Scoreboard</h1>
+		<div class="row scorerow rowhead">
+			<div class="col-2">#</div>
+			<div class="col">Player</div>
+			<div class="col-3">Score</div>
+		</div>
+		<div id="scorerows">
+		<div class="row scorerow">
+			<!--
+			<div class="col-2">1.</div>
+			<div class="col">Abdullah A. (ama170009)</div>
+			<div class="col-3">331</div>-->
+			Coming soon!
+		</div>
+		</div>
+		
+	</div>
+</div>
+
+<div id="whoBuzzed">Abdullah A buzzed in!</div>
+
+<div id="locationBar">&nbsp;</div>
+<script>
+enterusernameline;
+enteripaddress;
+
+buzzedIn = false;
+var serverSocket = new WebSocket(ip, 'echo-protocol');
+
+serverSocket.onopen = function (event) {
+  serverSocket.send("auth:1821831:"+playerName); 
+};
+serverSocket.onmessage = function (event) {
+  sockmessage = event.data;
+  
+  console.log("msg: " + event.data);
+  if(sockmessage.indexOf("buzzedIn:") > -1){
+	whobuzzed = sockmessage.split("buzzedIn:")[1];
+	if(whobuzzed == playerName){
+		
+		buzzIn();
+	}
+	else{
+		showbuzzedIn(sockmessage.split("buzzedIn:")[1]);
+	}
+  }
+  else if(sockmessage.indexOf("addUserScore:") > -1){
+	sockarray = sockmessage.split("addUserScore:")[1].split(":");
+	whoToAdd = sockarray[1];
+	whatToAdd = sockarray[2];
+	
+  }
+  else if (sockmessage.indexOf("addUser:") > -1){
+	sockarray = sockmessage.split("addUser:")[1];
+	whoToAdd = sockarray;
+	playerrowcode = '<div class="row scorerow" player="'+whoToAdd+'"><div class="col-2">1.</div><div class="col">'+whoToAdd+'</div><div class="col-3">0</div></div>';
+	$("#scorerows").append(playerrowcode);
+  }
+  else if (sockmessage.indexOf("reset231231") > -1){
+	resetBuzzer();
+  }
+  else if(sockmessage.indexOf("clearScoreboard:9012983123") > -1){
+	$("#scorerows").html("");
+  }
+  else if(sockmessage.indexOf("updateScore:091239231:") > -1){
+	userScoreDataArray = sockmessage.split("updateScore:091239231:")[1].split(":");
+	playerRank = userScoreDataArray[0];
+	thePlayerName = userScoreDataArray[1];
+	playerScore = userScoreDataArray[2];
+	playerrowcode = '<div class="row scorerow" player="'+thePlayerName+'"><div class="col-2">'+playerRank+'.</div><div class="col">'+thePlayerName+'</div><div class="col-3">'+playerScore+'</div></div>';
+	$("#scorerows").append(playerrowcode);
+  }
+  else if(sockmessage.indexOf("deletePlayer:213101274912:") > -1){
+	thePlayerName = sockmessage.split("deletePlayer:213101274912:")[1];
+	if(thePlayerName == playerName){
+		document.write("<title>Kicked</title>You have been kicked from the session");
+	}
+  }
+};
+</script>
+
+<script>
+function buzz(){
+	
+	if(!buzzedIn){
+		
+		
+		serverSocket.send("buzz:28023180:"+playerName);
+		
+	}
+}
+function buzzIn(){
+	window.navigator.vibrate(500);
+	$("#buzzer").css("backgroundColor","green");
+	$("#buzzer").css("fontSize","20pt");
+	$("#buzzer").text("You Buzzed!");
+	$("title").text("You buzzed in!");
+	
+}
+function resetBuzzer(){
+	buzzedIn = false;
+	$("#buzzer").css("fontSize","32pt");
+	$("#buzzer").css("backgroundColor","red");
+	$("#buzzer").text("Buzz!");
+	$("#whoBuzzed").css("display","none");
+	$("title").text("Buzzer");
+}
+
+function showbuzzedIn(buzzername){
+	$("title").text(buzzername+ " buzzed in!");
+	$("#whoBuzzed").text(buzzername+ " buzzed in!");
+	$("#buzzer").css("fontSize","25pt");
+	$("#buzzer").text("Locked out!");
+	$("#whoBuzzed").fadeIn();
+}
+
+</script>
+<script src="js/swipeFuncs.js"></script>
+</body>
+
+</html>

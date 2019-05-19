@@ -1,0 +1,24 @@
+
+<input id="theText" type="text"></input> <button onclick = "sendData()">Click me! </button>
+
+<script>
+
+serverUrl = "localhost:8000/";
+
+var websock = new WebSocket('ws://'+serverUrl, 'echo-protocol');
+
+
+websock.onopen = function (event) {
+  
+};
+websock.onmessage = function (event) {
+	eventData = event.data;
+	console.log("Message : " + eventData + " received!");
+};
+
+
+function sendData(){
+	websock.send(document.getElementById("theText").value);
+	document.getElementById("theText").value = "";
+}
+</script>

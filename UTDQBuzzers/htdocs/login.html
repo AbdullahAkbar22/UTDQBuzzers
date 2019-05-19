@@ -1,0 +1,12 @@
+<script src="js/jquery.js"></script>
+
+<input id="playername" type="text"></input>
+
+<button onclick="getName()"></button>
+
+<script>
+function getName(){
+	localStorage.setItem("playerName", $("#playername").text());
+	window.location = "buzzer.html";
+}
+</script>

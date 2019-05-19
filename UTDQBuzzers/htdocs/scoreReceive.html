@@ -1,0 +1,106 @@
+<html>
+<head>
+<script src="js/jquery.js"></script>
+<!--<meta name="viewport" content="width=device-width">-->
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/scoreReceive.css">
+<title>Receiving Score</title>
+</head>
+
+<body>
+<img id="logo" src="teamLogo.png"></img>
+<div id="whoBuzzed">
+<span id="buzzerName"></span> buzzed in!</div>
+
+
+<div id="correct" class="ctrlbtns" onclick="correct()">Correct</div>
+ <div id="incorrect" class="ctrlbtns" onclick="incorrect()">Incorrect</div>
+  <div id="resetScoreboard" class="ctrlbtns" onclick="reset()">Reset Scoreboard</div>
+ <div id="reset" class="ctrlbtns" onclick="reset()">Reset Buzzer</div>
+<audio src="bellRing.mp3" id="bellRing"></audio>
+<script>
+enterusernameline;
+enteripaddress;
+</script>
+
+<script>
+
+
+var serverSocket = new WebSocket(ip, 'echo-protocol');
+
+serverSocket.onopen = function (event) {
+  serverSocket.send("authAdmin:1821839091231:"+adminName); 
+};
+serverSocket.onmessage = function (event) {
+  sockmessage = event.data;
+  if(sockmessage.indexOf("buzzedIn") > -1 && !lockedout){
+  
+	buzzedIn(sockmessage.split("buzzedIn:")[1]);
+  }
+  
+  
+};
+
+</script>
+
+<script>
+lockedout = false;
+function blinkBuzz(indexOn){
+	if(indexOn != 4){
+		newNumb = 500 - (50 * indexOn);
+		$("#whoBuzzed").fadeIn(300,function(){$("#whoBuzzed").fadeOut(300, function(){blinkBuzz(indexOn + 1);});});
+		
+	}
+	else{
+		$("#whoBuzzed").fadeIn(600);
+		$(".ctrlbtns").css("display","block");
+		//setTimeout(function(){endIntro();},5200);
+	}
+	
+}
+	
+function buzzedIn(buzzerName){
+	lockedout = true;
+	document.getElementById("bellRing").play();
+	$("#buzzerName").text(buzzerName);
+	
+	blinkBuzz(0);
+	
+
+}
+function resetScorer(){
+	$("#whoBuzzed").css("display","none");
+	$(".ctrlbtns").css("display","none");
+	serverSocket.send("reset:79274239:"+adminName);
+	lockedout = false;
+}
+
+function correct(scoreChange){
+	correctBuzzer = $("#buzzerName").text();
+	if(correctBuzzer.length > 0){
+		serverSocket.send("addScore:231308123:"+correctBuzzer+":"+scoreChange);
+	}
+	resetScorer();
+}
+function incorrect(scoreChange){
+	incorrectBuzzer = $("#buzzerName").text();
+	if(incorrectBuzzer.length > 0){
+		serverSocket.send("addScore:231308123:"+incorrectBuzzer+":"+scoreChange);
+	}
+	resetScorer();
+}
+
+function resetScoreboard(){
+	serverSocket.send("resetScoreboard:4203491023");
+}
+
+function reset(){
+	resetScorer();
+}
+	
+</script>
+
+</body>
+</html>
+

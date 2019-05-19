@@ -1,0 +1,10 @@
+USERDATA
+username name password sessID isAdmin roomPriv roomIn
+
+
+
+ROOM<ROOM#>
+username score isAdmin
+
+TOTALSCORES
+username score

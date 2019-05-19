@@ -1,0 +1,79 @@
+﻿  mongoose.c
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(428): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(670): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(671): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(1481): warning C4267: 'function': conversion from 'size_t' to 'uint32_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(1499): warning C4267: 'function': conversion from 'size_t' to 'uint32_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(1685): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(1695): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(1958): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(3449): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(3502): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(3907): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(3914): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(3921): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(3936): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(3935): warning C4267: 'initializing': conversion from 'size_t' to 'socklen_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(6380): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(6535): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(6630): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(6664): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7272): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7412): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7489): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7508): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7562): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7608): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7642): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7669): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(7670): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(8113): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(8188): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(8318): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(8318): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(8479): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(8905): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(9071): warning C4244: 'function': conversion from 'sock_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(9128): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(9436): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(9446): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(9521): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(9563): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(9608): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(10353): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(10368): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(10374): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(10435): warning C4267: 'function': conversion from 'size_t' to 'uint32_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(10742): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(10733): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11063): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11179): warning C4244: 'function': conversion from '__int64' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11196): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11208): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11209): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11220): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11224): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11287): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11269): warning C4267: 'initializing': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11308): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11325): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11348): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11688): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11705): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11715): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11731): warning C4244: '=': conversion from '__int64' to 'unsigned char', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11744): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11790): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11825): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11928): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11985): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11994): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(16683): warning C4273: 'rmdir': inconsistent dll linkage
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\direct.h(116): note: see previous definition of 'rmdir'
+     Creating library C:\Users\Abdullah\Desktop\Programmer's Box\c++\UTDQBuzzers\x64\Release\UTDQBuzzers.lib and object C:\Users\Abdullah\Desktop\Programmer's Box\c++\UTDQBuzzers\x64\Release\UTDQBuzzers.exp
+  Generating code
+  25 of 3635 functions ( 0.7%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    12 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  UTDQBuzzers.vcxproj -> C:\Users\Abdullah\Desktop\Programmer's Box\c++\UTDQBuzzers\x64\Release\UTDQBuzzers.exe

@@ -1,0 +1,25 @@
+﻿  mongoose.c
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11191): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11203): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11204): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11215): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11219): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11264): warning C4267: 'initializing': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11303): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(11343): warning C4267: '=': conversion from 'size_t' to 'uint16_t', possible loss of data
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\mongoose.c(16678): warning C4273: 'rmdir': inconsistent dll linkage
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\direct.h(116): note: see previous definition of 'rmdir'
+  sqlite3.c
+  simpleserv.cpp
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\simpleserv.cpp(30): warning C4018: '<': signed/unsigned mismatch
+  sqliteDB.cpp
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\b64.h(14): warning C4018: '<': signed/unsigned mismatch
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\b64.h(36): warning C4018: '<': signed/unsigned mismatch
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\vigenere.h(13): warning C4018: '<': signed/unsigned mismatch
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\vigenere.h(40): warning C4101: 'j': unreferenced local variable
+c:\users\abdullah\desktop\programmer's box\c++\utdqbuzzers\utdqbuzzers\sqlitedb.cpp(249): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+     Creating library C:\Users\Abdullah\Desktop\Programmer's Box\c++\UTDQBuzzers\Release\UTDQBuzzers.lib and object C:\Users\Abdullah\Desktop\Programmer's Box\c++\UTDQBuzzers\Release\UTDQBuzzers.exp
+  Generating code
+  All 3590 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  UTDQBuzzers.vcxproj -> C:\Users\Abdullah\Desktop\Programmer's Box\c++\UTDQBuzzers\Release\UTDQBuzzers.exe

@@ -1,0 +1,45 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-color:#F7F7F7;
+	
+}
+#loginForm{
+	position:absolute;
+	top:50%;
+    left:50%;
+    z-index:500;
+    transform: translate(-50%, -50%);
+	
+	text-align:center;
+	
+}
+.inputEl{
+	font-size:16pt;
+	border:3px solid #FC650C;
+	//color: #FC650C;
+}
+
+#submitter{
+	background-color: rgba(0,0,0,0);
+	font-size:16pt;
+	padding:8px;
+	border-radius:30%;
+	border:3px solid #179941;
+	color: #179941;
+	cursor:pointer;
+}
+#submitter:hover{
+	background-color:#179941;
+	color: #F7F7F7;
+	
+}
+#logo{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:300;
+	
+}

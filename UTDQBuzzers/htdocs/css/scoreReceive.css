@@ -1,0 +1,123 @@
+*{
+	margin:0;
+	padding:0;
+}
+body, html{
+	width:100%;
+    height:100%;
+}
+body{
+	overflow-x:hidden;
+	//overflow-y:hidden;
+	background-color:#F7F7F7;
+}
+
+#whoBuzzed{
+	position:absolute;
+	top:50%;
+    left:50%;
+    z-index:500;
+    transform: translate(-50%, -50%);
+	font-size:30pt;
+	line-height:30pt;
+	display:none;
+	
+}
+.ctrlbtns{
+	position:absolute;
+	bottom:15%;
+	font-size:20pt;
+	line-height:20pt;
+	padding:15px;
+	//border-radius:40%;
+	color:white;
+	cursor:pointer;
+	display:none;
+	 box-shadow: 8px 5px 5px gray;
+}
+.ctrlbtns:hover{
+ box-shadow: 5px 3px 3px gray;
+
+}
+#correct{
+	background-color:#179941;
+	left:25%;
+}
+#correctSecond{
+	background-color:#179941;
+	left:37.5%;
+}
+#incorrect{
+	background-color:red;
+	left:50%;
+}
+#reset{
+	background-color:#FC650C;
+	left:75%;
+}
+#resetScoreboard{
+	background-color:#FC650C;
+	left:75%;
+	bottom: 30%;
+	display:block !important;
+}
+#showScoreboard{
+	background-color:#FC650C;
+	left:75%;
+	bottom: 45%;
+	display:block !important;
+}
+audio{
+	display:none;
+}
+h1{
+	color:#189841;
+	
+	}
+
+#logo{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:300;
+	width:10%;
+	min-width:150px;
+	max-width:500px;
+}
+#reset{
+	display:block !important;
+}
+
+
+#scoreBoard{
+	display:none;
+	position:absolute;
+	z-index:330;
+	background-color:#F7F7F7;
+	top:0;
+	left:0;
+	width:100%;
+	min-height:100%;
+}
+#xButton{
+	position:absolute;
+	z-index:350;
+	top:5px;
+	right:10px;
+	font-weight:bold;
+	font-size:18pt;
+	cursor:pointer;
+}
+
+.scorerow{
+	padding-top:10px;
+	border-bottom:1px solid gray;
+	margin-left:0px;
+}
+.rowhead{
+	font-weight:bold;
+}
+.trashIcon{
+	height:20px;
+	cursor:pointer;
+}
